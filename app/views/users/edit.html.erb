@@ -1,0 +1,25 @@
+<% provide(:title, 'Edit Page') %>
+<h1>Simple Sign-Up Page</h1>
+<%= render 'layouts/partials/error_messages' %>
+<%= form_with(model: @user, html: { class: "form-style" }) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name ,required: true, minlength: 5, maxlength: 50 %>
+  </div>
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email,
+      required: true, minlength: 5, maxlength: 100,
+      pattern: "(?:[A-Za-z]+\\.\\d+@osu\\.edu|\\w+@gmail\\.com)",
+      title: "Example: amayreh.1@osu.edu or user@gmail.com" %>
+  </div>
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password ,required: true, minlength: 6, maxlength: 20 %>
+  </div>
+  <div>
+    <%= form.label :password_confirmation, "Confirmation" %>
+    <%= form.password_field :password_confirmation ,required: true, minlength: 6, maxlength: 20 %>
+  </div>
+  <%= form.submit "Create my account" %>
+<% end %>
