@@ -182,3 +182,60 @@ nav {
 .flash-info {
   background: blue;
 }
+
+
+/* CSS for Home page */
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  color: black;
+  margin-bottom: 1rem;
+}
+.intro {
+  text-align: center;
+  background: #e8f5e9;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.features > div {
+  display: contents;
+}
+
+.features article {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.features .single {
+  grid-column: 2/3;
+}
