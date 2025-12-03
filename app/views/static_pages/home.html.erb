@@ -1,13 +1,10 @@
 <% provide(:title,'Home')%>
 
-<section class="intro">
-  <h2>Welcome to Split the Bill</h2>
-  <p>Going on a trip with friends? Keep track of expenses, balances, and settlements all in one place.</p>
-</section>
+  <%= react_component("Intro") %>
 
   <section class="features">
-  <%= react_component("Feature", { title: "Create Trips", about: "Set up trips with names, dates, and participants."}) %>
-  <%= react_component("Feature", { title: "Add Expenses", about: "Log costs like gas, lodging, food, and entertainment."}) %>
-  <%= react_component("Feature", { title: "Track Balances", about: "See who spent what and who owes whom."}) %>
-  <%= react_component("Feature", { title: "Settle Debts", about: "Get a simple list of transactions to balance everything.", className: "single"}) %>
+    <%= react_component("Feature", { title: "Create Trips", about: "Set up trips with names, dates, and participants."}) %>
+    <%= react_component("Feature", { title: "Add Expenses", about: "Log costs like gas, lodging, food, and entertainment."}) %>
+    <%= react_component("Feature", { title: "Track Balances", about: "See who spent what and who owes whom."}) %>
+    <%= react_component("Feature", { title: "Settle Debts", about: "Get a simple list of transactions to balance everything.", className: "single"}) %>
   </section>
