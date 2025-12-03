@@ -1,0 +1,24 @@
+<% provide(:title, 'New Expense') %>
+<h1>New Expense for <%= @trip.name%><h1>
+<%= form_with(model: [@trip, @expense], html: { class: "form-style" }) do |form| %>
+  <fieldset class="form-fieldset">
+    <legend class="form-legend">Sign Up</legend>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+    <div>
+      <%= form.label :amount %>
+      <%= form.number_field :amount, step: 0.01 %>
+    </div>
+    <div>
+      <%= form.label :paid_by, "Paid by" %>
+      <%= form.select :paid_by, @trip.participants.map { |x| [x.name, x.id]} %>
+    </div>
+    <div>
+      <%= label_tag :owed_by_text, "To be paid by User IDs divided by commas" %>
+      <%= text_field_tag :owed_by_text %>
+    </div>
+    <%= form.submit "Add Expense" %>
+  </fieldset>
+<% end %>

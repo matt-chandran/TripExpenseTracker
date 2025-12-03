@@ -1,0 +1,27 @@
+<% provide(:title,'Trip Info')%>
+<table class="mytable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Participants</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @trip.id%></td>
+            <td><%= @trip.name%></td>
+            <td><%= @trip.start_date%></td>
+            <td><%= @trip.end_date%></td>
+            <td><%= @trip.created_at%></td>
+            <td><%= @trip.updated_at%></td>
+            <td><%= @trip.participant_ids%></td>
+        </tr>
+    
+    </tbody>
+   
+</table>

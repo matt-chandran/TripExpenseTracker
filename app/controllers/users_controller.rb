@@ -3,7 +3,17 @@ class UsersController < ApplicationController
   # Load @user before selected actions to avoid repeating code (DRY).
   # Runs set_user only for show, edit, update, and destroy actions.
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  
+
+  protect_from_forgery with: :null_session #required to allow post from js
+
+  def validate_ids
+    ids = params[:ids].map(&:to_i)
+    valid_ids = User.where(id: ids).pluck(:id)
+    invalid_ids = ids - valid_ids
+
+    render json: { valid: invalid_ids.empty?, invalid_ids: invalid_ids }
+  end
+
   def index
     @users=User.all
   end

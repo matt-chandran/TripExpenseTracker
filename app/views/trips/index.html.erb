@@ -1,0 +1,52 @@
+<% provide(:title,'Trip Index Page')%>
+<% if @trips.any? %>
+
+  <table class="mytable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Participants</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th>Select</th>
+        <th>Edit</th>
+        <th>Expenses</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @trips.each do |trip| %>
+        <tr>
+          <td><%= trip.id %></td>
+          <td><%= trip.name %></td>
+          <td><%= trip.start_date %></td>
+          <td><%= trip.end_date %></td>
+          <td><%= trip.participant_ids %></td>
+          <td><%= trip.created_at %></td>
+          <td><%= trip.updated_at %></td>
+          <td><%= link_to 'Select', trip_path(trip.id)  %></td>
+          <td><%= link_to 'Edit', edit_trip_path(trip.id) %></td>
+          <td><%= link_to 'Expenses', trip_expenses_index_path(trip.id) %></td>
+          <td><%= button_to "Delete", trip_path(trip.id), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="8">End of Trip List :)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+<% else %>
+
+  <div >
+    There are no trips.
+  </div>
+
+<% end %>
