@@ -182,3 +182,100 @@ nav {
 .flash-info {
   background: blue;
 }
+
+/*CSS for about me page*/
+
+#about-us   { 
+  grid-area: about-us; 
+  align-self: center;
+  margin: 2%;
+}
+
+/* Buttons */
+#tyler-btn   { 
+  grid-area: tyler-btn; 
+  justify-self: center;
+}
+#matt-btn    { 
+  grid-area: matt-btn; 
+  justify-self: center;
+}
+#aaron-btn   { 
+  grid-area: aaron-btn; 
+  justify-self: center;
+}
+#emanuel-btn { 
+  grid-area: emanuel-btn; 
+  justify-self: center;
+}
+
+/* Info Text */
+#tyler-info   { 
+  grid-area: tyler-info; 
+  opacity: 0;
+  margin-left: 5%;
+}
+#matt-info    { 
+  grid-area: matt-info;
+  opacity: 0;
+  margin-left: 5%;
+}
+#aaron-info   {
+  grid-area: aaron-info; 
+  opacity: 0;
+  margin-left: 5%;
+}
+#emanuel-info { 
+  grid-area: emanuel-info;
+  opacity: 0;
+  margin-left: 5%;
+}
+
+#calc {
+  grid-area: calc;
+}
+
+#about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+          "about-us about-us"
+          "tyler-btn tyler-info"
+          "matt-btn matt-info"
+          "aaron-btn aaron-info"
+          "emanuel-btn emanuel-info"
+          "calc calc";
+    font-size: 20px;      
+}
+
+@media (min-width: 1024px) {
+  #about-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+          "about-us about-us about-us about-us"
+          "tyler-btn matt-btn aaron-btn emanuel-btn"
+          "tyler-info matt-info aaron-info emanuel-info"
+          "calc calc calc calc";
+    font-size: 20px;      
+  }
+}
+
+#about-container button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}  
+
+#about-container button {
+  width: 80%;
+  height: 80%;
+  padding: 0; 
+  border: none;
+  cursor: pointer;
+  overflow: hidden; 
+}
+
+
+

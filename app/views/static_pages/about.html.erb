@@ -1,2 +1,38 @@
 <% provide(:title,'about')%>
-<h1>About Page</h1>
+<%= javascript_include_tag "about_me", type: "module" %>
+<center><h1>About Page</h1></center>
+<div id="about-container">
+    <p id="about-us">We are a team of 3rd year students at The Ohio State University. We created this site to help you plan your travels. If you want to learn a little more about each of us click on our pictures. We also have included a calculator .</p>
+
+    <button id="tyler-btn"><%= image_tag "Tyler.JPG", alt: "Tyler Cobb" %></button>
+    <button id="matt-btn"><%= image_tag "Tyler.JPG", alt: "Matt Chandran" %></button>
+    <button id="aaron-btn"><%= image_tag "Tyler.JPG", alt: "Aaron Geise" %></button>
+    <button id="emanuel-btn"><%= image_tag "Tyler.JPG", alt: "Emanuel Messele" %></button>
+
+    <p id="tyler-info">
+        <b>Name:</b> Tyler Cobb</br>
+        <b>Role:</b> Created the about page comment</br>
+        <b>About:</b> Tyler is a 3rd year, Computer Science Engineering student, at The Ohio State University. He is also participating in Air Force ROTC and hopes to commission as an officer after graduation. His hobbies include fishing, hiking, video games, and watching football.
+    </p>
+    <p id="matt-info">
+        <b>Name:</b> Matt Chandran</br>
+        <b>Role:</b> ?</br>
+        <b>About:</b>?
+    </p>
+    <p id="aaron-info">
+        <b>Name:</b> Aaron Geise</br>
+        <b>Role:</b> ?</br>
+        <b>About:</b>?
+    </p>
+    <p id="emanuel-info">
+        <b>Name:</b> Emanuel Messele</br>
+        <b>Role:</b> ?</br>
+        <b>About:</b>?
+    </p>
+
+    <div id="calc"> 
+        <input type="text" id="result" readonly></input><br>
+        <input type="button" value="="></input>
+        <input output="result" type="button" value="1" onclick="dis('1')"></input>
+    </div>
+</div>
