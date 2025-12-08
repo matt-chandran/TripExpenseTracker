@@ -2,10 +2,10 @@
 function Feature(props) {
   return (
     <React.Fragment>
-      <article className={props.className}>
+      <button className={props.className} onClick={() => window.location.href = props.link}>
         <h3>{props.title}</h3>
         <p>{props.about}</p>
-      </article>
+      </button>
     </React.Fragment>
   );
 }
@@ -13,7 +13,8 @@ function Feature(props) {
 Feature.propTypes = {
   title: PropTypes.string,
   about: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  link: PropTypes.string
 };
 
 

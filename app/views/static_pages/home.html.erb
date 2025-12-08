@@ -3,8 +3,25 @@
   <%= react_component("Intro") %>
 
   <section class="features">
-    <%= react_component("Feature", { title: "Create Trips", about: "Set up trips with names, dates, and participants."}) %>
-    <%= react_component("Feature", { title: "Add Expenses", about: "Log costs like gas, lodging, food, and entertainment."}) %>
-    <%= react_component("Feature", { title: "Track Balances", about: "See who spent what and who owes whom."}) %>
-    <%= react_component("Feature", { title: "Settle Debts", about: "Get a simple list of transactions to balance everything.", className: "single"}) %>
+    <%= react_component("Feature", { 
+      title: "Create Trips", 
+      about: "Set up trips with names, dates, and participants.",
+      link: new_trip_path
+      }) %>
+    <%= react_component("Feature", { 
+      title: "View Trips", 
+      about: "View your trips and log costs like gas, lodging, food, and entertainment.",
+      link: trip_index_path
+    }) %>
+    <%= react_component("Feature", { 
+      title: "Add Your Friends", 
+      about: "Add your friends' ID's to your trip, and manage expenses.",
+      link: users_path
+      }) %>
+    <%= react_component("Feature", { 
+      title: "Trip Planner", 
+      about: "See what trips you can take with your budget.", 
+      className: "single",
+      link: "/trip_budget"
+      }) %>
   </section>
