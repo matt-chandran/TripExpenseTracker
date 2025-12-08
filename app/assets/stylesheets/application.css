@@ -241,6 +241,15 @@ section h2 {
 }
 
 .big-button {
+  display: inline-block;
   font-size: 600;
   padding: 24px 48px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.big-button:hover {
+  background-color: black;
 }
