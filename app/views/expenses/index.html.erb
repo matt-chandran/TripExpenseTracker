@@ -1,5 +1,5 @@
 <% provide(:title, 'Expense Sheet') %>
-<%= link_to "Add Expense", new_trip_expense_path(@trip)%>
+<%= button_to "Add Expense", new_trip_expense_path(@trip)%>
 <table class = "mytable">
     <thead>
         <tr>
@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <%= @expenses.each do |expense|%>
+        <% @expenses.each do |expense|%>
             <tr>
                 <td><%= expense.description%></td>
                 <td><%= expense.amount%></td>
@@ -30,7 +30,7 @@
         </tr>
     </thead>
     <tbody>
-        <%= @balances.each do |user_id, owes_hash|%>
+        <% @balances.each do |user_id, owes_hash|%>
           <% owes_hash.each do |to_id, amount|%>
             <tr>
                 <td><%= user_id %></td>

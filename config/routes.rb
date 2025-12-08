@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   delete 'users/:id',to: 'users#destroy'
   get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
   patch 'users/:id', to: 'users#update'
-  post 'users/validate_ids', to: 'user#validate_ids'
+  post 'users/validate_ids', to: 'users#validate_ids'
   #------------------------------------------------------
   get 'trips', to: 'trips#index', as: 'trip_index'
   get 'trips/new_trip', to: 'trips#new', as: 'new_trip'
