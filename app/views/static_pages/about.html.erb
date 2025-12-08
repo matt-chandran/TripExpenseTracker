@@ -1,2 +1,65 @@
 <% provide(:title,'about')%>
-<h1>About Page</h1>
+<%= javascript_include_tag "about_me", type: "module" %>
+<center><h1>About Page</h1></center>
+<div id="about-container">
+    <p id="about-us">We are a team of 3rd year students at The Ohio State University. We created this site to help you plan your travels. If you want to learn a little more about each of us click on our pictures. We also have included a calculator .</p>
+
+    <button id="tyler-btn"><%= image_tag "tyler.JPG", alt: "Tyler Cobb" %></button>
+    <button id="matt-btn"><%= image_tag "matt.jpg", alt: "Matt Chandran" %></button>
+    <button id="aaron-btn"><%= image_tag "aaron.jpg", alt: "Aaron Geise" %></button>
+    <button id="emanuel-btn"><%= image_tag "emanuel.jpg", alt: "Emanuel Messele" %></button>
+
+    <p id="tyler-info">
+        <b>Name:</b> Tyler Cobb</br>
+        <b>Role:</b> Created the about page comment</br>
+        <b>About:</b> Tyler is a 3rd year, Computer Science Engineering student, at The Ohio State University. He is also participating in Air Force ROTC and hopes to commission as an officer after graduation. His hobbies include fishing, hiking, video games, and watching football.
+    </p>
+    <p id="matt-info">
+        <b>Name:</b> Matt Chandran</br>
+        <b>Role:</b> Implemented the Home Page using react
+        <b>About:</b> Matt is a 3rd year CIS student, at The Ohio State University. He is interested in pursuing cybersecurity in the future.</br>
+    </p>
+    <p id="aaron-info">
+        <b>Name:</b> Aaron Geise</br>
+        <b>Role:</b> Implemented Trips and Expenses</br>
+        <b>About:</b> Aaron is a 3rd year CIS student, at The Ohio State University. Aaron is from Sandusky Ohio.
+    </p>
+    <p id="emanuel-info">
+        <b>Name:</b> Emanuel Messele</br>
+        <b>Role:</b> Implemented the vacation finder using Angular</br>
+        <b>About:</b> Hi, my name is Emanuel Messele, and I’m a incoming junior studying Computer Science with a focus in Artificial Intelligence at The Ohio State University, expecting to graduate in May 2027.
+    </p>
+
+    <div id="calc"> 
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id="result"></td>
+			    <td><input type="button" value="c" onclick="clearResult()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis('1')"></input></td>
+                <td><input type="button" value="2" onclick="dis('2')"></input></td>
+                <td><input type="button" value="3" onclick="dis('3')"></input></td>
+                <td><input type="button" value="/" onclick="dis('/')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')"></input></td>
+                <td><input type="button" value="5" onclick="dis('5')"></input></td>
+                <td><input type="button" value="6" onclick="dis('6')"></input></td>
+                <td><input type="button" value="-" onclick="dis('-')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')"></input></td>
+                <td><input type="button" value="8" onclick="dis('8')"></input></td>
+                <td><input type="button" value="9" onclick="dis('9')"></input></td>
+                <td><input type="button" value="*" onclick="dis('*')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="dis('0')"></input></td>
+                <td><input type="button" value="." onclick="dis('.')"></input></td>
+                <td><input type="button" value="+" onclick="dis('+')"></input></td>
+                <td><input type="button" value="=" onclick="evalResult()"></input></td>
+            </tr>
+        </table>
+    </div>
+</div>

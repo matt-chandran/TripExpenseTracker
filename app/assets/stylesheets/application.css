@@ -257,3 +257,253 @@ section h2 {
 .big-button:hover {
   background-color: black;
 }
+/*CSS for about me page*/
+
+#about-us   { 
+  grid-area: about-us; 
+  align-self: center;
+  margin: 2%;
+}
+
+/* Buttons */
+#tyler-btn   { 
+  grid-area: tyler-btn; 
+  justify-self: center;
+}
+#matt-btn    { 
+  grid-area: matt-btn; 
+  justify-self: center;
+}
+#aaron-btn   { 
+  grid-area: aaron-btn; 
+  justify-self: center;
+}
+#emanuel-btn { 
+  grid-area: emanuel-btn; 
+  justify-self: center;
+}
+
+/* Info Text */
+#tyler-info   { 
+  grid-area: tyler-info; 
+  opacity: 0;
+  margin-left: 5%;
+}
+#matt-info    { 
+  grid-area: matt-info;
+  opacity: 0;
+  margin-left: 5%;
+}
+#aaron-info   {
+  grid-area: aaron-info; 
+  opacity: 0;
+  margin-left: 5%;
+}
+#emanuel-info { 
+  grid-area: emanuel-info;
+  opacity: 0;
+  margin-left: 5%;
+}
+
+#calc {
+  grid-area: calc;
+}
+
+#about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+          "about-us about-us"
+          "tyler-btn tyler-info"
+          "matt-btn matt-info"
+          "aaron-btn aaron-info"
+          "emanuel-btn emanuel-info"
+          "calc calc";
+    font-size: 20px;      
+}
+
+@media (min-width: 1024px) {
+  #about-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+          "about-us about-us about-us about-us"
+          "tyler-btn matt-btn aaron-btn emanuel-btn"
+          "tyler-info matt-info aaron-info emanuel-info"
+          "calc calc calc calc";
+    font-size: 20px;      
+  }
+}
+
+#about-container button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}  
+
+#about-container button {
+  width: 80%;
+  height: 80%;
+  padding: 0; 
+  border: none;
+  cursor: pointer;
+  overflow: hidden;   
+}
+
+#calc {
+  margin: 2%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width:100%; 
+}
+#calc table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#calc td {
+  padding: 6px;
+  width: 25%;
+}
+
+#calc input[type="text"] {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+#calc input[type="button"] {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 599px) {
+  header {
+    padding: 0.6rem 0;
+  }
+
+  #menu {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: stretch;
+  }
+
+  #menu li a {
+    display: block;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+  }
+
+  .form-style {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0.5rem auto;
+  }
+
+  .mytable {
+    width: 100%;
+    font-size: 13px;
+    margin: 0.5rem;
+    overflow-x: auto;
+    display: block;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .site-footer {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 600px) and (max-width: 1023px) {
+  header {
+    padding: 0.8rem 0;
+  }
+
+  #menu {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  #menu li a {
+    padding: 0.45rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+
+  .intro {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .form-style {
+    width: 80%;
+    max-width: 420px;
+    margin: 1rem auto;
+  }
+
+  .mytable {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Large screens (desktop) - global tweaks (keeps about page rules untouched) */
+@media (min-width: 1024px) {
+  header {
+    padding: 1.2rem 0;
+  }
+
+  #menu {
+    gap: 2rem;
+  }
+
+  #menu li a {
+    font-size: 1.05rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
