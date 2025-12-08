@@ -23,12 +23,12 @@
 <% end %>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+//document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const input = document.querySelector("input[name='participant_ids_text']");
 
-    form.addEventListener("submit", (x) => {
-        x.preventDefault(); //prevents submission
+    //form.addEventListener("submit", (x) => {
+        //x.preventDefault(); //prevents submission
 
         //Promise returning function
         function validateUsers(idsArray) {
@@ -67,6 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((invalid) => {
             alert(`Invalid Users, IDs: ${invalid}`);
         });
-    });
-});
+    //});
+//});
 </script>
