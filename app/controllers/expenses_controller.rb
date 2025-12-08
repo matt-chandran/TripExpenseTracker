@@ -3,6 +3,7 @@ class ExpensesController < ApplicationController
 
     def index
         @expenses = @trip.expenses
+        @users_by_id = @trip.participants.index_by(&:id)
         calculate_balances
     end
 

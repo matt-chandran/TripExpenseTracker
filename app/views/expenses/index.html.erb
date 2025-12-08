@@ -1,5 +1,6 @@
 <% provide(:title, 'Expense Sheet') %>
-<%= button_to "Add Expense", new_trip_expense_path(@trip)%>
+<%= button_to "Add Expense", new_trip_expense_path(@trip), class: "big-button"%>
+<h1>Expenses</h1>
 <table class = "mytable">
     <thead>
         <tr>
@@ -14,8 +15,8 @@
             <tr>
                 <td><%= expense.description%></td>
                 <td><%= expense.amount%></td>
-                <td><%= expense.payer&.id%></td>
-                <td><%= expense.owed_by_array.join(",")%></td>
+                <td><%= @users_by_id[expense.payer.id]&.name%></td>
+                <td><%= expense.owed_by_array.map { |uid| @users_by_id[uid]&.name}.join(", ")%></td>
             </tr>
         <% end %>
     </tbody>
@@ -33,8 +34,8 @@
         <% @balances.each do |user_id, owes_hash|%>
           <% owes_hash.each do |to_id, amount|%>
             <tr>
-                <td><%= user_id %></td>
-                <td><%= to_id %></td>
+                <td><%= @users_by_id[user_id]&.name %></td>
+                <td><%= @users_by_id[to_id]&.name %></td>
                 <td><%= amount.round(2) %></td>
             </tr>
           <% end %>

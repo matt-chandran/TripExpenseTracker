@@ -239,3 +239,8 @@ section h2 {
 .features .single {
   grid-column: 2/3;
 }
+
+.big-button {
+  font-size: 600;
+  padding: 24px 48px;
+}
