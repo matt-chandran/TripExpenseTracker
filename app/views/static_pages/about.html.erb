@@ -31,8 +31,35 @@
     </p>
 
     <div id="calc"> 
-        <input type="text" id="result" readonly></input><br>
-        <input type="button" value="="></input>
-        <input output="result" type="button" value="1" onclick="dis('1')"></input>
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id="result"></td>
+			    <td><input type="button" value="c" onclick="clearResult()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis('1')"></input></td>
+                <td><input type="button" value="2" onclick="dis('2')"></input></td>
+                <td><input type="button" value="3" onclick="dis('3')"></input></td>
+                <td><input type="button" value="/" onclick="dis('/')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')"></input></td>
+                <td><input type="button" value="5" onclick="dis('5')"></input></td>
+                <td><input type="button" value="6" onclick="dis('6')"></input></td>
+                <td><input type="button" value="-" onclick="dis('-')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')"></input></td>
+                <td><input type="button" value="8" onclick="dis('8')"></input></td>
+                <td><input type="button" value="9" onclick="dis('9')"></input></td>
+                <td><input type="button" value="*" onclick="dis('*')"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="dis('0')"></input></td>
+                <td><input type="button" value="." onclick="dis('.')"></input></td>
+                <td><input type="button" value="+" onclick="dis('+')"></input></td>
+                <td><input type="button" value="=" onclick="evalResult()"></input></td>
+            </tr>
+        </table>
     </div>
 </div>
