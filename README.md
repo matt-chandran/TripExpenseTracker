@@ -5,3 +5,9 @@ To run the project one must:
 
 1. run the command "bundle install"
 2. run the command "rails s -p ####" -substitute # with a 4 digit number
+
+## Contributors
+Matthew Chandran
+Tyler Cobb
+Aaron Geise
+Emanuel Messele
